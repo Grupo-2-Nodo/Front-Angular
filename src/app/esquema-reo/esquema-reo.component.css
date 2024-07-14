@@ -1,0 +1,18 @@
+.bordeCanvas{
+    border: #000066 solid;
+    padding: 20px;
+}
+
+.contenidoGrafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.canvas-wrapper {
+    width: 50%;
+}
+.canvas-wrapper canvas {
+    width: 100%;
+    height: auto;
+}
