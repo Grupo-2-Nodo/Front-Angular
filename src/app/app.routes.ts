@@ -3,7 +3,10 @@ import { HomeDiagnosticoComponent } from './home-diagnostico/home-diagnostico.co
 import { MarcoVRLNComponent } from './marco-vrln/marco-vrln.component';
 import { EsquemaReoComponent } from './esquema-reo/esquema-reo.component';
 import { RegistroComponent } from './registro/registro.component';
-import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component'
+import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component';
+import { LoginComponent } from './login/login.component';
+import { CanvasComponent } from './canvas/canvas.component';
+
 
 export const routes: Routes = [
     {
@@ -25,5 +28,10 @@ export const routes: Routes = [
     {
         path: "circulo-dorado",
         component: CirculoDoradoComponent
+    },{
+        path:"login",component:LoginComponent
+    },
+    {
+        path:"canvas",component:CanvasComponent
     }
 ];
