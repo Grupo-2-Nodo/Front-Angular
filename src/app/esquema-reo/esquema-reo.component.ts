@@ -53,7 +53,7 @@ export class EsquemaReoComponent {
           font: {
             size: 12
           },
-          callback: function(label) {
+          callback: function(label: string) {
             let words = label.split(" "); 
             let lines = [];
             let currentLine = words[0];
@@ -119,7 +119,6 @@ export class EsquemaReoComponent {
     } catch (error) {
       console.error('Error rendering chart:', error);
     }
-    
   }
 
   ngOnInit(): void {

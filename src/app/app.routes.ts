@@ -29,9 +29,12 @@ export const routes: Routes = [
         path: "circulo-dorado",
         component: CirculoDoradoComponent
     },{
-        path:"login",component:LoginComponent
+        path:"login",
+        component:LoginComponent
+
     },
     {
-        path:"canvas",component:CanvasComponent
+        path:"canvas",
+        component:CanvasComponent
     }
 ];
