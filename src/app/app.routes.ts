@@ -6,9 +6,14 @@ import { RegistroComponent } from './registro/registro.component';
 import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component';
 import { LoginComponent } from './login/login.component';
 import { CanvasComponent } from './canvas/canvas.component';
+import { HomeComponent } from './home/home.component';
 
 
 export const routes: Routes = [
+    {
+        path: "",
+        component: RegistroComponent
+    },
     {
         path: "home-diagnostico",
         component : HomeDiagnosticoComponent
@@ -22,19 +27,18 @@ export const routes: Routes = [
         component: EsquemaReoComponent
     },
     {
-        path: "registro-principal",
-        component: RegistroComponent
-    },
-    {
         path: "circulo-dorado",
         component: CirculoDoradoComponent
     },{
         path:"login",
         component:LoginComponent
-
     },
     {
         path:"canvas",
         component:CanvasComponent
+    },
+    {
+        path:"home",
+        component:HomeComponent
     }
 ];
