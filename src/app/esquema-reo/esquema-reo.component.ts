@@ -1,13 +1,14 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Inject, PLATFORM_ID,NgModule  } from '@angular/core';
 import { Chart, ChartConfiguration, ChartType, ChartData, registerables  } from 'chart.js';
 import { isPlatformBrowser,CommonModule } from "@angular/common";
+import { NavbarComponent } from '../navbar/navbar.component';
 
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-esquema-reo',
   standalone: true,
-  imports:[CommonModule],
+  imports:[CommonModule, NavbarComponent],
   templateUrl: './esquema-reo.component.html',
   styleUrl: './esquema-reo.component.css'
 })
@@ -53,7 +54,7 @@ export class EsquemaReoComponent {
           font: {
             size: 12
           },
-          callback: function(label) {
+          callback: function(label: string) {
             let words = label.split(" "); 
             let lines = [];
             let currentLine = words[0];
@@ -119,7 +120,6 @@ export class EsquemaReoComponent {
     } catch (error) {
       console.error('Error rendering chart:', error);
     }
-    
   }
 
   ngOnInit(): void {
