@@ -11,7 +11,11 @@ import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {
-        path: "",
+        path:"",
+        component:HomeComponent
+    },
+    {
+        path: "registro",
         component: RegistroComponent
     },
     {
@@ -37,8 +41,5 @@ export const routes: Routes = [
         path:"canvas",
         component:CanvasComponent
     },
-    {
-        path:"home",
-        component:HomeComponent
-    }
+    
 ];
