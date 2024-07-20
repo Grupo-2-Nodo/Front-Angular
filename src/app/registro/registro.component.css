@@ -1,0 +1,30 @@
+/* Agrega un fondo de color a toda la vista */
+body {
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el relleno predeterminado del body */
+    background-color: rgb(233, 251, 248) /* Color de fondo para toda la página */
+  }
+  
+  /* Estilos específicos para el encabezado */
+  header {
+    background-color: rgb(96, 225, 203); /* Color de fondo del encabezado (como bg-dark en Bootstrap) */
+    color: white; /* Color del texto en el encabezado */
+    padding: 20px;
+    width: 100;
+  }
+  
+  .header-text {
+    font-size: 2rem; /* Ajusta el tamaño según tus necesidades */
+    color: black; /* Asegúrate de que el color esté especificado si no se define en el texto-wrapper */
+  }
+  
+  .text-wrapper span {
+    font-size: 2rem; /* Ajusta el tamaño según tus necesidades */
+    color: black; /* Asegúrate de que el color esté especificado si no se define en el texto-wrapper */
+  }
+  /* Estilo opcional para el contenedor del formulario */
+  .container {
+    background-color: rgb(233, 251,248); /* Color de fondo del contenedor del formulario */
+    padding: 20px; /* Espaciado interno del contenedor del formulario */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+  }
