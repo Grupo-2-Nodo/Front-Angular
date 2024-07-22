@@ -1,51 +1,56 @@
-.circulo-contenedor{
-  height: 23rem;
+.circulo-contenedor {
+  position: relative;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  
-  .circulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: black;
-  }
-  
-  .circulo-1 {
-    width: 300px;
-    height: 300px;
-    background-color: #ffff40;
-    border: 2px solid #000;
-    text-align: center;
-    padding-top: 10px;
-  }
-  
-  .circulo-2 {
-    width: 200px;
-    height: 200px;
-    background-color: #ebf833;
-    border: 2px solid #000;
-    padding-top: 10px;
-  }
-  
-  .circulo-3 {
-    width: 100px;
-    height: 100px;
-    background-color: #DBDE28;
-    border: 2px solid #000;
-    padding-top: 20px;
-  }
-  
-  .texto-circulo {
-    
-    bottom: 0;
-    width: 100%;
-    padding: 0px;
-    text-align: center;
-    font-size: 14px;
-    padding-top: 10px;
+
+.circulo {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.circulo-1 {
+  width: 25vw;
+  height: 25vw;
+  background-color: #ffff40;
+  border: 2px solid #000;
+}
+
+.circulo-2 {
+  width: 18vw;
+  height: 18vw;
+  background-color: #ebf833;
+  border: 2px solid #000;
+}
+
+.circulo-3 {
+  width: 10vw;
+  height: 10vw;
+  background-color: #DBDE28;
+  border: 2px solid #000;
+}
+
+.texto-circulo {
+  position: absolute;
+  top: 0; /* Posiciona el texto en la parte superior */
+  width: 100%;
+  text-align: center;
+  font-size: 16px; /* Tamaño ajustado para que se adapte mejor */
+  padding-top: 5px; /* Añadir espacio superior para el texto */
+}
+
+  .card-center {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .card-blue {
@@ -59,6 +64,9 @@
     color:black
   }
 
+  .card-yellow:hover {
+    cursor:pointer;
+  }
 
   .infoCirculoBox {
     display: flex;
@@ -86,5 +94,21 @@
     text-align: justify; 
   }
 
-
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .one, .two, .three {
+    padding: 10px;
+    background-color: rgb(96, 225, 203);
+    border: 1px solid #a89bff;
+    border-radius: 5%;
+    text-align: center;
+    width: 60%;
+  }
+  
+ 
+  
   
