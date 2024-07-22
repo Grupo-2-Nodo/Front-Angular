@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
- 
+
 <div style="background-color: rgb(233, 251, 248);">
   <div class="container  mb-4">
     <div class="row">
@@ -15,21 +15,24 @@
       </div>
     </div>
   </div>
-    <div class="row">
-      <div class="col-1">
-  
-      </div>
-      <div class="col-10 text-center contenidoGrafico">
-        <div class="canvas-wrapper" *ngIf="isBrowser">
-  
-          <canvas #chartCanvas class="bordeCanvas"></canvas>
-        </div>
-      </div>
-      <div class="col-1">
-  
-      </div>
-  
+  <div class="row">
+    <div class="col-1">
+
     </div>
-      <div class="ms-3  mb-3 mt-5 text-center ">
-      <button type="submit" class="btn colorBoton">&nbsp;Regresar al menú</button>
+    <div class="col-10 text-center contenidoGrafico">
+      <div class="canvas-wrapper" *ngIf="isBrowser">
+
+        <canvas #chartCanvas class="bordeCanvas"></canvas>
       </div>
+    </div>
+    <div class="col-1">
+
+    </div>
+
+  </div>
+  <div class="ms-3  mb-3 mt-5 text-center ">
+    <button type="submit" class="btn colorBoton">&nbsp;Regresar al menú</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

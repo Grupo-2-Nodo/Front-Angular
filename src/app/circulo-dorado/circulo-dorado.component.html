@@ -1,80 +1,84 @@
 <app-navbar></app-navbar>
 
-  
+
 <div class="container mt-4 mb-4">
-    <div class="row">
-      <div class="col-3 infoCirculoBox">
-        <div class="card card-yellow" style="width: 18rem;">
-          <div class="card-header text-center" (click)="cambiarVistaInfoCirculo()">
-            <div class="iconoDesplegable">
-              <span class="titulo">Circulo Dorado</span>
-              <i class="bi bi-caret-down-fill"></i>
-            </div>
+  <div class="row">
+    <div class="col-3 infoCirculoBox">
+      <div class="card card-yellow" style="width: 18rem;">
+        <div class="card-header text-center" (click)="cambiarVistaInfoCirculo()">
+          <div class="iconoDesplegable">
+            <span class="titulo">Circulo Dorado</span>
+            <i class="bi bi-caret-down-fill"></i>
           </div>
-          <ul class="list-group list-group-flush" *ngIf="contextoVisible">
-            <li class="list-group-item" text-a> Es un concepto, que tiene como objetivo crear y desarrollar la propuesta de valor de una nueva idea, negocio o campaña, con éxito.</li>
-          </ul>
         </div>
-        
+        <ul class="list-group list-group-flush" *ngIf="contextoVisible">
+          <li class="list-group-item" text-a> Es un concepto, que tiene como objetivo crear y desarrollar la propuesta
+            de valor de una nueva idea, negocio o campaña, con éxito.</li>
+        </ul>
       </div>
-      <div class="col-6">
 
-        <div class="text-center text-primary  font-weight: bold;" >
-          <h2 class="colorTituloAzul"> Círculo Dorado</h2>
-        </div>
-        <div class="circulo-contenedor">
-            <div class="circulo circulo-1">
-              <span class="texto-circulo">¿Qué?</span>
-            </div>
-            <div class="circulo circulo-2">
-              <span class="texto-circulo">¿Cómo?</span>
-            </div>
-            <div class="circulo circulo-3">
-              <span class="texto-circulo">¿Por qué?¿Para qué?</span>
-            </div>
-          </div>
-      </div>
-      <div class="col-3">
-
-      </div>
     </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="card card-blue" style="width: 18rem;">
-          <div class="card-header text-center ">
-            ¿Por Qué?¿Para Qué?
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><textarea placeholder="(Propósito del negocio)" class="form-control" rows="3"></textarea></li>
-          </ul>
-        </div>
+    <div class="col-6">
+
+      <div class="text-center text-primary  font-weight: bold;">
+        <h2 class="colorTituloAzul"> Círculo Dorado</h2>
       </div>
-      <div class="col-4">
-        <div class="card card-blue" style="width: 18rem;">
-          <div class="card-header text-center">
-            ¿Cómo?
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><textarea placeholder="(Propuesta de valor)" class="form-control" rows="3"></textarea></li>
-          </ul>
+      <div class="circulo-contenedor">
+        <div class="circulo circulo-1">
+          <span class="texto-circulo">¿Qué?</span>
         </div>
-      </div>
-      <div class="col-4">
-        <div class="card card-blue" style="width: 18rem;">
-          <div class="card-header text-center">
-            ¿Qué?
-          </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><textarea placeholder="(Productos y servicios)" class="form-control" rows="3"></textarea></li>
-            </ul>       
+        <div class="circulo circulo-2">
+          <span class="texto-circulo">¿Cómo?</span>
+        </div>
+        <div class="circulo circulo-3">
+          <span class="texto-circulo">¿Por qué?¿Para qué?</span>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 text-center mt-3">
-        <button  class="btn colorBoton">Guardar</button>
+    <div class="col-3">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="card card-blue" style="width: 18rem;">
+        <div class="card-header text-center ">
+          ¿Por Qué?¿Para Qué?
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><textarea placeholder="(Propósito del negocio)" class="form-control"
+              rows="3"></textarea></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card-blue" style="width: 18rem;">
+        <div class="card-header text-center">
+          ¿Cómo?
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><textarea placeholder="(Propuesta de valor)" class="form-control"
+              rows="3"></textarea></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="card card-blue" style="width: 18rem;">
+        <div class="card-header text-center">
+          ¿Qué?
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><textarea placeholder="(Productos y servicios)" class="form-control"
+              rows="3"></textarea></li>
+        </ul>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-12 text-center mt-3">
+      <button class="btn colorBoton">Guardar</button>
+    </div>
+  </div>
+</div>
 
-  
+<app-footer></app-footer>

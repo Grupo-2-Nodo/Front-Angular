@@ -3,13 +3,14 @@ import { Chart, ChartConfiguration, ChartType, ChartData, registerables  } from 
 import { isPlatformBrowser,CommonModule } from "@angular/common";
 import { NavbarComponent } from '../navbar/navbar.component';
 import { RouterLink } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 Chart.register(...registerables);
 
 @Component({
   selector: 'app-esquema-reo',
   standalone: true,
-  imports:[CommonModule, NavbarComponent],
+  imports:[CommonModule, NavbarComponent, FooterComponent],
   templateUrl: './esquema-reo.component.html',
   styleUrl: './esquema-reo.component.css'
 })
