@@ -1,0 +1,74 @@
+.linea-divisora{
+    height: 5px;
+    width: 100%;
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.container-principal{
+    display: grid;
+    grid-template-columns: 20% 45% 34.2%;
+    gap: 5px;
+}
+
+.container-principal div{
+    height: 220px;
+    width: 100%;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+
+.footer-links{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 35px;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+.footer-contacto span{
+    width: auto;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #EEF2F5;
+}
+
+.footer-contacto span input{
+    all: unset;
+    width: 65%;
+    text-align:left;
+    font-weight: 600;
+}
+
+.footer-contacto span button{
+    all: unset;
+    height: 35px;
+    border-radius: 7px;
+    background-color: #7B66FA;
+    width: 35%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.footer-redes{
+    width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+}
