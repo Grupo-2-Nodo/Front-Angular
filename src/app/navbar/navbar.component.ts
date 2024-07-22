@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { MarcoVRLNComponent } from '../marco-vrln/marco-vrln.component';
 import { HomeDiagnosticoComponent } from '../home-diagnostico/home-diagnostico.component';
 
+
 @Component({
   selector: 'app-navbar',
   standalone: true,

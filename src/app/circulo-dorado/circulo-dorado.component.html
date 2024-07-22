@@ -3,12 +3,23 @@
   
 <div class="container mt-4 mb-4">
     <div class="row">
-      <div class="col-3">
-
+      <div class="col-3 infoCirculoBox">
+        <div class="card card-yellow" style="width: 18rem;">
+          <div class="card-header text-center" (click)="cambiarVistaInfoCirculo()">
+            <div class="iconoDesplegable">
+              <span class="titulo">Circulo Dorado</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </div>
+          </div>
+          <ul class="list-group list-group-flush" *ngIf="contextoVisible">
+            <li class="list-group-item" text-a> Es un concepto, que tiene como objetivo crear y desarrollar la propuesta de valor de una nueva idea, negocio o campaña, con éxito.</li>
+          </ul>
+        </div>
+        
       </div>
       <div class="col-6">
 
-        <div class="text-center text-primary" >
+        <div class="text-center text-primary  font-weight: bold;" >
           <h2 class="colorTituloAzul"> Círculo Dorado</h2>
         </div>
         <div class="circulo-contenedor">
@@ -29,7 +40,7 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card card-blue" style="width: 18rem;">
           <div class="card-header text-center ">
             ¿Por Qué?¿Para Qué?
           </div>
@@ -39,7 +50,7 @@
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card card-blue" style="width: 18rem;">
           <div class="card-header text-center">
             ¿Cómo?
           </div>
@@ -49,13 +60,13 @@
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card card-blue" style="width: 18rem;">
           <div class="card-header text-center">
             ¿Qué?
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><textarea placeholder="(Productos y servicios)" class="form-control" rows="3"></textarea></li>
-          </ul>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><textarea placeholder="(Productos y servicios)" class="form-control" rows="3"></textarea></li>
+            </ul>       
         </div>
       </div>
     </div>

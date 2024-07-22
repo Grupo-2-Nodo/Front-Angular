@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ViewChild, ElementRef, Inject, PLATFORM_ID,Ng
 import { Chart, ChartConfiguration, ChartType, ChartData, registerables  } from 'chart.js';
 import { isPlatformBrowser,CommonModule } from "@angular/common";
 import { NavbarComponent } from '../navbar/navbar.component';
+import { RouterLink } from '@angular/router';
 
 Chart.register(...registerables);
 
@@ -37,7 +38,7 @@ export class EsquemaReoComponent {
       pointBackgroundColor: '#ccc',
       pointBorderColor: 'rgb(0, 0, 102)',
       pointHoverBackgroundColor: 'rgb(0, 0, 102)',
-      pointHoverBorderColor: 'rgb(0, 0, 102)'
+      pointHoverBorderColor: 'rgb(0, 0, 102)',
     }]
   };
 
@@ -52,8 +53,10 @@ export class EsquemaReoComponent {
       r: {
         pointLabels: {
           font: {
-            size: 12
+            size: 14,
+              weight: 'bold',
           },
+          color: 'black',
           callback: function(label: string) {
             let words = label.split(" "); 
             let lines = [];
