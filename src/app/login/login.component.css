@@ -9,11 +9,11 @@ body {
   background-color: #fff;
   /* background-image: url("bg.png"); */
 }
-.icono {
+/* .icono {
   width: 200px;
   height: 200px;
   border-radius: 15px 15px 15px 15px;
-}
+} */
 .centroimg {
   position: absolute;
   top: 20%;
@@ -23,11 +23,11 @@ body {
 
 .form-login {
   border-radius: 10px 10px 10px 10px;
-  width: 400px;
-  height: 340px;
-  background-color: #0a0ad8;
+  width: 410px;
+  height: 350px;
+  background-color: rgb(9, 87, 231);
   margin: auto;
-  margin-top: 180px;
+  margin-top: -18px;
   box-shadow: 7px 13px 37px hsl(0, 6%, 6%);
   padding: 20px 30px;
   border-top: 4px solid #13bad8;
@@ -62,12 +62,16 @@ body {
 .buttons {
   width: 100%;
   height: 40px;
-  background: #017bab;
+  background: rgb(96, 225, 203);
   border: none;
   color: white;
   margin-bottom: 16px;
+  border-radius: 15px;
 }
 
+.controls {
+  border-radius: 10px;
+}
 .form-login p {
   height: 40px;
   text-align: center;
@@ -86,11 +90,11 @@ body {
 }
 
 h5 {
-  color: white;
+  color: rgb(247, 236, 236);
 }
 
 p strong a {
-  color: #0a0ad8;
+  color: rgb(247, 236, 236);
 }
 
 h1 img {
