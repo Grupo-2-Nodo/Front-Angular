@@ -1,10 +1,29 @@
 <app-navbar></app-navbar>
 
 
-<div class="container mt-4 mb-4">
+
+<div class="container-fluid mt-4 mb-4">
   <div class="row">
-    <div class="col-3 infoCirculoBox">
-      <div class="card card-yellow" style="width: 18rem;">
+      <div class="col text-center text-primary font-weight-bold">
+        <h2 class="colorTituloAzul">Círculo Dorado</h2>
+      </div>
+  </div>
+  
+  <div class="row ">
+    <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
+      <div class="one">Hola soy texto hola chao casa carro</div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
+      <div class="two">Hola soy texto hola chao casa carro ventana pizarron</div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
+      <div class="three">Hola soy texto hola chao casa carro</div>
+    </div>   
+ </div>
+
+  <div class="row mt-4">
+    <div class="col-md-3 col-sm-12 col-xs-12 infoCirculoBox">
+      <div class="card card-yellow" style="width: 11rem;margin-right: 0;">
         <div class="card-header text-center" (click)="cambiarVistaInfoCirculo()">
           <div class="iconoDesplegable">
             <span class="titulo">Circulo Dorado</span>
@@ -12,64 +31,59 @@
           </div>
         </div>
         <ul class="list-group list-group-flush" *ngIf="contextoVisible">
-          <li class="list-group-item" text-a> Es un concepto, que tiene como objetivo crear y desarrollar la propuesta
-            de valor de una nueva idea, negocio o campaña, con éxito.</li>
+          <li class="list-group-item" text-a>Es un concepto, que tiene como objetivo crear y desarrollar la propuesta de valor de una nueva idea, negocio o campaña, con éxito.</li>
         </ul>
       </div>
-
     </div>
-    <div class="col-6">
-
-      <div class="text-center text-primary  font-weight: bold;">
-        <h2 class="colorTituloAzul"> Círculo Dorado</h2>
-      </div>
+    <div class="col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
       <div class="circulo-contenedor">
         <div class="circulo circulo-1">
-          <span class="texto-circulo">¿Qué?</span>
+            <span class="texto-circulo">¿Qué?</span>
+            <div class="circulo circulo-2">
+                <span class="texto-circulo">¿Cómo?</span>
+                <div class="circulo circulo-3">
+                    <span class="">¿Por qué? <br> ¿Para qué?</span>
+                </div>
+            </div>
         </div>
-        <div class="circulo circulo-2">
-          <span class="texto-circulo">¿Cómo?</span>
-        </div>
-        <div class="circulo circulo-3">
-          <span class="texto-circulo">¿Por qué?¿Para qué?</span>
-        </div>
-      </div>
     </div>
-    <div class="col-3">
-
     </div>
+    <div class="col-3"></div>
   </div>
-  <div class="row">
-    <div class="col-4">
-      <div class="card card-blue" style="width: 18rem;">
-        <div class="card-header text-center ">
+  <div class="row mt-4 d-flex justify-content-center">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div class="card card-blue card-center mb-3" style="width: 18rem;">
+        <div class="card-header text-center">
           ¿Por Qué?¿Para Qué?
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><textarea placeholder="(Propósito del negocio)" class="form-control"
-              rows="3"></textarea></li>
+          <li class="list-group-item">
+            <textarea placeholder="(Propósito del negocio)" class="form-control" rows="3"></textarea>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card card-blue" style="width: 18rem;">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div class="card card-blue card-center mb-3" style="width: 18rem;">
         <div class="card-header text-center">
           ¿Cómo?
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><textarea placeholder="(Propuesta de valor)" class="form-control"
-              rows="3"></textarea></li>
+          <li class="list-group-item">
+            <textarea placeholder="(Propuesta de valor)" class="form-control" rows="3"></textarea>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="col-4">
-      <div class="card card-blue" style="width: 18rem;">
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div class="card card-blue card-center mb-3" style="width: 18rem;">
         <div class="card-header text-center">
           ¿Qué?
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><textarea placeholder="(Productos y servicios)" class="form-control"
-              rows="3"></textarea></li>
+          <li class="list-group-item">
+            <textarea placeholder="(Productos y servicios)" class="form-control" rows="3"></textarea>
+          </li>
         </ul>
       </div>
     </div>
