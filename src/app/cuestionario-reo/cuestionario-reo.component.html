@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<div class="quiz-container">
+    <h2>Radar Estratégico</h2>
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+    </div>
+    <h3>{{ questions[currentQuestionIndex].question }}</h3>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+        <input type="radio" name="option" [id]="'option' + i"> &nbsp;
+        <label [for]="'option' + i">{{ option }}</label>
+      </li>
+    </ul>
+    <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+  </div>
+  
+  <app-footer></app-footer>
