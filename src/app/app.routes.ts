@@ -7,6 +7,7 @@ import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component
 import { LoginComponent } from './login/login.component';
 import { CanvasComponent } from './canvas/canvas.component';
 import { HomeComponent } from './home/home.component';
+import { CuestionarioReoComponent } from './cuestionario-reo/cuestionario-reo.component';
 
 
 export const routes: Routes = [
@@ -41,5 +42,8 @@ export const routes: Routes = [
         path:"canvas",
         component:CanvasComponent
     },
-    
+    {
+        path:"cuestionario-reo",
+        component: CuestionarioReoComponent
+    },
 ];
