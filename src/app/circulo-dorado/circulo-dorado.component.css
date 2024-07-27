@@ -21,22 +21,22 @@
 .circulo-1 {
   width: 25vw;
   height: 25vw;
-  background-color: #ffff40;
-  border: 2px solid #000;
+  background-color: #ffff70;
+  border: 2px solid #ffff70;
 }
 
 .circulo-2 {
   width: 18vw;
   height: 18vw;
-  background-color: #ebf833;
-  border: 2px solid #000;
+  background-color: #ffffa7;
+  border: 2px solid #ffffa7;
 }
 
 .circulo-3 {
   width: 10vw;
   height: 10vw;
-  background-color: #DBDE28;
-  border: 2px solid #000;
+  background-color: #ffffdf;
+  border: 2px solid #ffffdf;
 }
 
 .texto-circulo {
@@ -100,14 +100,92 @@
     margin-bottom: 20px;
   }
   
-  .one, .two, .three {
+  .one {
     padding: 10px;
-    background-color: rgb(96, 225, 203);
+    background-color: #ffffdf;
     border: 1px solid #a89bff;
     border-radius: 5%;
-    text-align: center;
+    text-align: justify;
     width: 60%;
   }
+  
+  .two {
+    padding: 10px;
+    background-color: #ffffa7;
+    border: 1px solid #a89bff;
+    border-radius: 5%;
+    text-align: justify;
+    width: 60%;
+  }
+  .three {
+    padding: 10px;
+    background-color: #ffff70;
+    border: 1px solid #a89bff;
+    border-radius: 5%;
+    text-align: justify;
+    width: 60%;
+  }
+  
+
+  /*Estilos formulario*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-color: #e9fbf8;
+  margin: 0;
+  padding: 0;
+}
+.quiz-container {
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress {
+  height: 20px;
+  background-color: #60e1cb;
+  width: 0%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+  text-align: left;
+}
+label {
+  color: #000000;
+}
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #60e1cb;
+  color: #ffffff;
+}
+button:disabled {
+  background-color: #6c757d;
+}
+  
+  
+
   
  
   

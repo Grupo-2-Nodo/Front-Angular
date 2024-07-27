@@ -7,6 +7,8 @@ import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component
 import { LoginComponent } from './login/login.component';
 import { CanvasComponent } from './canvas/canvas.component';
 import { HomeComponent } from './home/home.component';
+import { DofaComponent } from './dofa/dofa.component';
+
 
 
 export const routes: Routes = [
@@ -40,6 +42,10 @@ export const routes: Routes = [
     {
         path:"canvas",
         component:CanvasComponent
+    },
+    {
+        path:"dofa",
+        component:DofaComponent
     },
     
 ];

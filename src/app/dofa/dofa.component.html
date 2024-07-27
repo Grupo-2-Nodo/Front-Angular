@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="section" id="section1">
+        <h4 class="mini-title">Mini Título 1</h4>
+        <p>Texto de la sección 1</p>
+    </div>
+    <div class="section" id="section2">
+        <h4 class="mini-title">Mini Título 2</h4>
+        <p>Texto de la sección 2</p>
+    </div>
+    <div class="section" id="section3">
+        <h4 class="mini-title">Mini Título 3</h4>
+        <p>Texto de la sección 3</p>
+    </div>
+    <div class="section" id="section4">
+        <h4 class="mini-title">Mini Título 4</h4>
+        <p>Texto de la sección 4</p>
+    </div>
+</div>
+
+<div class="quiz-container">
+    <h2>Matriz DOFA</h2>
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+    </div>
+    <h4>{{ questions[currentQuestionIndex].title }}</h4>
+    <h5>{{ questions[currentQuestionIndex].question }}</h5>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+        <input type="radio" name="option" [id]="'option' + i"> &nbsp;
+        <label [for]="'option' + i">{{ option }}</label>
+      </li>
+    </ul>
+    <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+  </div>
+  
+  <app-footer></app-footer>

@@ -11,13 +11,13 @@
   
   <div class="row ">
     <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
-      <div class="one">Hola soy texto hola chao casa carro</div>
+      <div class="one">El porqué son aquellos principios, valores o propósitos que orientarán la forma de pensar, y de actuar, de la empresa. En este punto, es importante responder por qué existe la empresa.</div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
-      <div class="two">Hola soy texto hola chao casa carro ventana pizarron</div>
+      <div class="two"> El cómo, este engloba los procesos, sistemas y estrategias que la empresa debe llevar a cabo para que el qué se vuelva una realidad. Y cual es su componente diferenciador. </div>
     </div>
     <div class="col-md-4 col-sm-12 col-xs-12 d-flex justify-content-center p-3">
-      <div class="three">Hola soy texto hola chao casa carro</div>
+      <div class="three">Qué se engloban los servicios, productos o resultados tangibles que vende o comercializa la empresa en cuestión. Y tener claro qué puede hacer por el cliente.</div>
     </div>   
  </div>
 
@@ -51,40 +51,23 @@
     <div class="col-3"></div>
   </div>
   <div class="row mt-4 d-flex justify-content-center">
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <div class="card card-blue card-center mb-3" style="width: 18rem;">
-        <div class="card-header text-center">
-          ¿Por Qué?¿Para Qué?
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="quiz-container">
+        <h2>Circulo Dorado</h2>
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="progress"></div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <textarea placeholder="(Propósito del negocio)" class="form-control" rows="3"></textarea>
+        <h4>{{ questions[currentQuestionIndex].title }}</h4>
+        <h5>{{ questions[currentQuestionIndex].question }}</h5>
+        
+        <ul>
+          <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+            <input type="radio" name="option" [id]="'option' + i"> &nbsp;
+            <label [for]="'option' + i">{{ option }}</label>
           </li>
         </ul>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <div class="card card-blue card-center mb-3" style="width: 18rem;">
-        <div class="card-header text-center">
-          ¿Cómo?
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <textarea placeholder="(Propuesta de valor)" class="form-control" rows="3"></textarea>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-md-4 col-sm-12 col-xs-12">
-      <div class="card card-blue card-center mb-3" style="width: 18rem;">
-        <div class="card-header text-center">
-          ¿Qué?
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            <textarea placeholder="(Productos y servicios)" class="form-control" rows="3"></textarea>
-          </li>
-        </ul>
+        <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Anterior</button>
+        <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Siguiente</button>
       </div>
     </div>
   </div>
@@ -94,5 +77,3 @@
     </div>
   </div>
 </div>
-
-<app-footer></app-footer>
