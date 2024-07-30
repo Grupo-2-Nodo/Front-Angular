@@ -36,8 +36,8 @@ body{
 }
 
 .colorBoton{
-    background-color: rgb(96, 225, 203) !important;
-    color:black !important;
+    background-color: #000066 !important;
+    color:white !important;
     font-weight: 550;
     border-radius: 8%;
 }

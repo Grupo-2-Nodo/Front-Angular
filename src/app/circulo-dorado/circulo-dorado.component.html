@@ -62,10 +62,13 @@
         
         <ul>
           <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
-            <input type="radio" name="option" [id]="'option' + i"> &nbsp;
+            <input type="radio" name="option" [id]="'option' + i" (change)="selectOption(i)"[checked]="selectedOptionIndex === i"> &nbsp;
             <label [for]="'option' + i">{{ option }}</label>
           </li>
         </ul>
+        <div *ngIf="showWarning" class="warning-message">
+          Por favor, seleccione una opción antes de continuar.
+        </div>
         <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Anterior</button>
         <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Siguiente</button>
       </div>
@@ -73,7 +76,7 @@
   </div>
   <div class="row">
     <div class="col-12 text-center mt-3">
-      <button class="btn colorBoton">Guardar</button>
+      <button class="btn colorBoton" (click)="submitForm()">Enviar formulario</button>
     </div>
   </div>
 </div>
