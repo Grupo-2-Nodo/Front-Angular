@@ -6,14 +6,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
-    gap: 25px;
+    gap: 33px;
+    padding-bottom: ;
 }
+@media (max-width: 600px) {
+    .container-cards {
+        font-size: 0.6rem;
+        padding: 1rem
+    }
+}
+@media (min-width: 601px) and (max-width: 1200px){
+    .container-cards {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        padding-bottom: 50px;
+    }
+}
+
 
 .item{
     width: 100%;
     height: 100%;
     border-radius: 10px;
     background-color: white;
+   
+    
 }
 
 .linea-header{
@@ -24,6 +41,7 @@
 }
 
 .body-item{
-    padding: 5px;
+ padding-bottom: 50px;
     padding-left: 15px;
+    
 }
