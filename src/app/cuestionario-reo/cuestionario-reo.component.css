@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-color: #e9fbf8;
+  margin: 0;
+  padding: 0;
+}
+.quiz-container {
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress {
+  height: 20px;
+  background-color: #60e1cb;
+  width: 0%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+  text-align: left;
+}
+label {
+  color: #000000;
+}
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #60e1cb;
+  color: #ffffff;
+}
+button:disabled {
+  background-color: #6c757d;
+}
+
+
