@@ -47,6 +47,7 @@ export const routes: Routes = [
         path:"dofa",
         component:DofaComponent
     },
+    {
         path:"cuestionario-reo",
         component: CuestionarioReoComponent
     },

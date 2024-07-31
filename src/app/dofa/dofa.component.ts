@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 
+declare const Swal: any;  // Declarar Swal para TypeScript
+
 @Component({
   selector: 'app-dofa',
   standalone: true,
@@ -59,14 +61,28 @@ export class DofaComponent implements OnInit {
       this.showPreviousResponse = true;
     }
   }
-  submitForm() {
+
+  finishQuestion(){
     if (this.currentQuestionIndex === this.questions.length - 1 && this.selectedOptionIndex !== null) {
+      this.nextQuestion();
       // Si se han respondido todas las preguntas, muestra un mensaje de éxito
-      alert('¡Formulario enviado con éxito!');
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "¡Formulario enviado con éxito!",
+        showConfirmButton: false,
+        timer: 1800
+      });        
     } else {
       // Si no se han respondido todas las preguntas, muestra un mensaje de error
-      alert('Por favor, responda todas las preguntas antes de enviar el formulario.');
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Ingrese los datos obligatorios!",
+        showConfirmButton: false,
+        timer: 1800
+      }); 
     }
   }
-  }
+}
 

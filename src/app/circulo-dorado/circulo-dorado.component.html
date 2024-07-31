@@ -76,7 +76,10 @@
   </div>
   <div class="row">
     <div class="col-12 text-center mt-3">
-      <button class="btn colorBoton" (click)="submitForm()">Enviar formulario</button>
+      @if (currentQuestionIndex === 17) {
+        <a class="btn btn-info" (click)="finishQuestion()">Enviar formulario</a>
+      } 
     </div>
   </div>
 </div>
+<app-footer></app-footer>
