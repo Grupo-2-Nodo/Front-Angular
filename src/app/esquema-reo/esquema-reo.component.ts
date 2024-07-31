@@ -95,7 +95,7 @@ export class EsquemaReoComponent {
   };
 
   private getDataFromSessionStorage(): (number | null)[] {
-    const dataString = sessionStorage.getItem('dataForm');
+    const dataString = sessionStorage.getItem('dataFormCuestionarioReo');
     if (dataString) {
       try {
         const data = JSON.parse(dataString);

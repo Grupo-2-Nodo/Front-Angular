@@ -43,11 +43,13 @@
     Por favor, seleccione una opción antes de continuar.
   </div>
   <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Anterior</button>
-  <button (click)="nextQuestion()">Siguiente</button>
+  <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Siguiente</button>
 </div>
 <div class="row">
   <div class="col-12 text-center mt-3">
-    <button class="btn colorBoton" (click)="submitForm()">Enviar formulario</button>
+    @if (currentQuestionIndex === 19) {
+      <a class="btn btn-info" (click)="finishQuestion()">Enviar formulario</a>
+    }
   </div>
 
 <app-footer></app-footer>
