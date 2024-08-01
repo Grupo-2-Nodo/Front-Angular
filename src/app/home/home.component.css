@@ -7,19 +7,24 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50% 50%;
     gap: 33px;
-    padding-bottom: ;
+    padding-bottom: 20px;
+    
 }
 @media (max-width: 600px) {
     .container-cards {
-        font-size: 0.6rem;
-        padding: 1rem
+        
+        font-size: 0.9rem;
+        padding: 1rem;
+        grid-template-columns: 1fr;
+       padding-bottom:  50px;
     }
 }
-@media (min-width: 601px) and (max-width: 1200px){
+@media (min-width: 601px) and (max-width: 1000px){
     .container-cards {
-        font-size: 0.7rem;
+        font-size: 0.rem;
         padding: 0.5rem;
         padding-bottom: 50px;
+        grid-template-columns: 1fr;
     }
 }
 

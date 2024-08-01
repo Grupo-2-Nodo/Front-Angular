@@ -27,5 +27,6 @@ body {
     background-color: rgb(233, 251,248); /* Color de fondo del contenedor del formulario */
     padding: 20px; /* Espaciado interno del contenedor del formulario */
     border-radius: 8px; /* Bordes redondeados opcionales */
+    width: 100%;
   }
  
