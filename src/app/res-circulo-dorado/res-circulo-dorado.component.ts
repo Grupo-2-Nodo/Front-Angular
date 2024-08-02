@@ -41,8 +41,8 @@ export class ResCirculoDoradoComponent implements OnInit {
       datasets: [{
         label: 'Porcentaje de respuestas',
         data: [porcentajeGrupo1, porcentajeGrupo2, porcentajeGrupo3],
-        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-        borderColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        backgroundColor: ['#00F0FF', '#00CEFF', '#00A9ff '],
+        borderColor: ['#00F0FF', '#00CEFF', '#00A9ff '],
         borderWidth: 1
       }]
     };
@@ -56,10 +56,23 @@ export class ResCirculoDoradoComponent implements OnInit {
         scales: {
           y: {
             beginAtZero: true,
+            max: 100, // Ajusta el valor máximo del eje Y a 100%
             ticks: {
-              // Configura el formato de los ticks para mostrar porcentajes
+              color: 'black', // Color de los números del eje Y
+              font: {
+                size: 16 // Tamaño de los números del eje Y
+              },
               callback: function(value) {
                 return value + '%';
+              }
+            }
+          },
+          x: {
+            ticks: {
+              color: 'black', // Color de las etiquetas en el eje X
+              font: {
+                size: 16, // Tamaño de las etiquetas en el eje X
+                weight: 'bold' // Grosor de las etiquetas en el eje X
               }
             }
           }
@@ -67,11 +80,27 @@ export class ResCirculoDoradoComponent implements OnInit {
         plugins: {
           legend: {
             labels: {
-              color: '#000066', // Cambia el color de la etiqueta aquí
+              color: '#black', // Cambia el color de las etiquetas de la leyenda
               font: {
-                size: 16 // Ajusta el tamaño de la fuente si es necesario
-                },
+                size: 16 // Ajusta el tamaño de la fuente de la leyenda
+              }
             }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(tooltipItem) {
+                return tooltipItem.dataset.label + ': ' + tooltipItem.raw + '%';
+              }
+            },
+            titleFont: {
+              size: 14 // Tamaño de la fuente del título en el tooltip
+            },
+            bodyFont: {
+              size: 14 // Tamaño de la fuente del cuerpo en el tooltip
+            },
+            backgroundColor: '#FFF', // Color de fondo del tooltip
+            titleColor: '#000', // Color del título del tooltip
+            bodyColor: '#000' // Color del cuerpo del tooltip
           }
         }
       }
