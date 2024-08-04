@@ -82,7 +82,7 @@ export class CuestionarioReoComponent implements OnInit {
     }
     hasCompletedQuestionnaire(): boolean {
         return this.currentQuestionIndex === this.questions.length - 1 && this.arrayData.length === this.questions.length;
-      }
+    }
 
     finishQuestion(){
       if (this.currentQuestionIndex === this.questions.length - 1 && this.selectedOptionIndex !== null) {

@@ -35,7 +35,7 @@
   <h5>{{ questions[currentQuestionIndex].question }}</h5>
   <ul>
     <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
-      <input type="radio" name="option" [id]="'option' + i" (change)="selectOption(i)"[checked]="selectedOptionIndex === i"> &nbsp;
+      <input value="{{(i + 1)}}" type="radio" name="option" [id]="'option' + i" (change)="selectOption(i, $event) "[checked]="selectedOptionIndex === i"> &nbsp;
       <label [for]="'option' + i">{{ option }}</label>
     </li>
   </ul>
