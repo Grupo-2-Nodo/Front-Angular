@@ -23,11 +23,13 @@ export class CirculoDoradoComponent  implements OnInit{
       this.contextoVisible = !this.contextoVisible;
     }
 
-    
+
 
 
     questions: any[] = [];
     currentQuestionIndex: number = 0;
+    value: string = "";
+    arrayData: Array<number> = [];
     selectedOptionIndex: number | null = null;
     showWarning: boolean = false;
     showPreviousResponse = false; // mostrar la respuesta anterior
@@ -55,31 +57,44 @@ export class CirculoDoradoComponent  implements OnInit{
   }
 
   prevQuestion() {
-      if (this.currentQuestionIndex > 0) {
+    if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
-      this.selectedOptionIndex = null;
       this.showWarning = false;
       }
   }
 
   nextQuestion() {
-    if (this.selectedOptionIndex !== null && this.currentQuestionIndex < this.questions.length - 1) {
-      this.currentQuestionIndex++;
-      this.selectedOptionIndex = null;
-      this.showWarning = false;
-    } else if (this.selectedOptionIndex === null) {
-      this.showWarning = true;
-    }
+    console.log('Seleccionaste : ' + this.value);
+      if (this.selectedOptionIndex !== null && this.currentQuestionIndex < this.questions.length - 1) {
+          this.currentQuestionIndex++;
+          this.selectedOptionIndex = null;
+          this.showWarning = false;
+          this.arrayData.push(Number(this.value));
+      }else{
+          this.arrayData.push(Number(this.value));
+          this.showWarning = true;
+      }
   }
+
   goPrevious() {
     if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.showPreviousResponse = true;
     }
   }
+
+  onRadioChange(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    if (inputElement) {
+      this.value = inputElement.value;
+      this.selectedOptionIndex = parseInt(inputElement.value) - 1;
+    }
+}
+
   finishQuestion(){
     if (this.currentQuestionIndex === this.questions.length - 1 && this.selectedOptionIndex !== null) {
       this.nextQuestion();
+        sessionStorage.setItem('dataFormCirculoDorado', JSON.stringify(this.arrayData));
       // Si se han respondido todas las preguntas, muestra un mensaje de éxito
       Swal.fire({
         position: "center",

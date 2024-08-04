@@ -16,7 +16,7 @@ Chart.register(...registerables);
 })
 export class ResCirculoDoradoComponent implements OnInit {
 
-  respuestas: number[] = [3, 2, 4, 1, 2, 3, 4, 3, 2, 1, 3, 4, 2, 3, 1, 4, 2, 3];
+  respuestas: any[] = this.getDataFromSessionStorage();
 
   ngOnInit() {
     this.createBarChart();
@@ -108,5 +108,20 @@ export class ResCirculoDoradoComponent implements OnInit {
 
     const ctx = document.getElementById('barChart') as HTMLCanvasElement;
     new Chart(ctx, config);
+  }
+
+  private getDataFromSessionStorage(): (number | null)[] {
+    const dataString = sessionStorage.getItem('dataFormCirculoDorado');
+    if (dataString) {
+      try {
+        const data = JSON.parse(dataString);
+        if (Array.isArray(data)) {
+          return data.map((item: string | null) => item === null ? null : parseFloat(item));
+        }
+      } catch (e) {
+        console.error('Error parsing sessionStorage data:', e);
+      }
+    }
+    return []; // Devuelve un arreglo vacío si no hay datos o si ocurre un error
   }
 }
