@@ -3,12 +3,10 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  selector: 'app-canvas',
+  selector: 'app-blog',
   standalone: true,
   imports: [NavbarComponent, FooterComponent],
-  templateUrl: './canvas.component.html',
-  styleUrl: './canvas.component.css'
+  templateUrl: './blog.component.html',
+  styleUrl: './blog.component.css',
 })
-export class CanvasComponent {
-
-}
+export class BlogComponent {}

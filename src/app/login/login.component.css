@@ -27,17 +27,13 @@ body {
   height: 350px;
   background-color: rgb(9, 87, 231);
   margin: auto;
-  margin-top: -18px;
   box-shadow: 7px 13px 37px hsl(0, 6%, 6%);
   padding: 20px 30px;
   border-top: 4px solid #13bad8;
   color: rgb(32, 27, 27);
 }
 .centrologin {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 50px;
 }
 
 .form-login h5 {

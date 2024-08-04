@@ -3,43 +3,52 @@ import { HomeDiagnosticoComponent } from './home-diagnostico/home-diagnostico.co
 import { MarcoVRLNComponent } from './marco-vrln/marco-vrln.component';
 import { EsquemaReoComponent } from './esquema-reo/esquema-reo.component';
 import { RegistroComponent } from './registro/registro.component';
-import { CirculoDoradoComponent} from './circulo-dorado/circulo-dorado.component';
+import { CirculoDoradoComponent } from './circulo-dorado/circulo-dorado.component';
 import { LoginComponent } from './login/login.component';
-import { CanvasComponent } from './canvas/canvas.component';
 import { HomeComponent } from './home/home.component';
-
+import { DofaComponent } from './dofa/dofa.component';
+import { CuestionarioReoComponent } from './cuestionario-reo/cuestionario-reo.component';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
-    {
-        path:"",
-        component:HomeComponent
-    },
-    {
-        path: "registro",
-        component: RegistroComponent
-    },
-    {
-        path: "home-diagnostico",
-        component : HomeDiagnosticoComponent
-    },
-    {
-        path: "marco-vrln",
-        component: MarcoVRLNComponent
-    },
-    {
-        path: "esquema-reo",
-        component: EsquemaReoComponent
-    },
-    {
-        path: "circulo-dorado",
-        component: CirculoDoradoComponent
-    },{
-        path:"login",
-        component:LoginComponent
-    },
-    {
-        path:"canvas",
-        component:CanvasComponent
-    },
-    
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'registro',
+    component: RegistroComponent,
+  },
+  {
+    path: 'home-diagnostico',
+    component: HomeDiagnosticoComponent,
+  },
+  {
+    path: 'marco-vrln',
+    component: MarcoVRLNComponent,
+  },
+  {
+    path: 'esquema-reo',
+    component: EsquemaReoComponent,
+  },
+  {
+    path: 'circulo-dorado',
+    component: CirculoDoradoComponent,
+  },
+  {
+    path: 'dofa',
+    component: DofaComponent,
+  },
+  {
+    path: 'cuestionario-reo',
+    component: CuestionarioReoComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+  },
 ];

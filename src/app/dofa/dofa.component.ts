@@ -1,65 +1,49 @@
-import { Component,OnInit } from '@angular/core';
-import { NgModule } from '@angular/core';
-import {CirculoDoradoService} from './circulo-dorado-service';
+import { Component, OnInit } from '@angular/core';
+import { DofaService } from './dofa-service';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
 
 declare const Swal: any;  // Declarar Swal para TypeScript
 
-
 @Component({
-  selector: 'app-circulo-dorado',
+  selector: 'app-dofa',
   standalone: true,
-  imports: [NavbarComponent,CommonModule ,FooterComponent],
-  templateUrl: './circulo-dorado.component.html',
-  styleUrl: './circulo-dorado.component.css'
+  imports: [CommonModule, NavbarComponent, FooterComponent],
+  templateUrl: './dofa.component.html',
+  styleUrls: ['./dofa.component.css']
 })
-export class CirculoDoradoComponent  implements OnInit{
+export class DofaComponent implements OnInit {
 
-   contextoVisible:boolean = false; //bandera ws
+  questions: any[] = [];
+  currentQuestionIndex: number = 0;
+  selectedOptionIndex: number | null = null;
+  showWarning: boolean = false;
+  showPreviousResponse = false; // mostrar la respuesta anterior
+  previousResponse = ''; // respuesta anterior
 
-    cambiarVistaInfoCirculo = () => {
-      this.contextoVisible = !this.contextoVisible;
-    }
+  constructor(private dofaService: DofaService) { }
 
-    
-
-
-    questions: any[] = [];
-    currentQuestionIndex: number = 0;
-    selectedOptionIndex: number | null = null;
-    showWarning: boolean = false;
-    showPreviousResponse = false; // mostrar la respuesta anterior
-    previousResponse = ''; // respuesta anterior
-
-
-    constructor(private quizService: CirculoDoradoService) { 
-
-    }
-
-
-    ngOnInit(): void {
-      this.questions = this.quizService.getQuestions();
-      console.log(this.questions);
-      this.showWarning = false;
+  ngOnInit(): void {
+    this.questions = this.dofaService.getQuestions();
+    console.log(this.questions);
+    this.showWarning = false;
   }
 
   get progress() {
-      return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
+    return ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
   }
-
   selectOption(index: number) {
     this.selectedOptionIndex = index;
     this.showWarning = false;
   }
 
   prevQuestion() {
-      if (this.currentQuestionIndex > 0) {
+    if (this.currentQuestionIndex > 0) {
       this.currentQuestionIndex--;
       this.selectedOptionIndex = null;
       this.showWarning = false;
-      }
+    }
   }
 
   nextQuestion() {
@@ -77,6 +61,7 @@ export class CirculoDoradoComponent  implements OnInit{
       this.showPreviousResponse = true;
     }
   }
+
   finishQuestion(){
     if (this.currentQuestionIndex === this.questions.length - 1 && this.selectedOptionIndex !== null) {
       this.nextQuestion();
@@ -100,3 +85,4 @@ export class CirculoDoradoComponent  implements OnInit{
     }
   }
 }
+

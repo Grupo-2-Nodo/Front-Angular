@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+body {
+  font-family: 'Abel', sans-serif;
+  background-color: #e9fbf8;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-container {
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress {
+  height: 20px;
+  background-color: #000066;
+  width: 0%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  text-align: left;
+}
+
+label {
+  color: #000000;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #000066;
+  color: #ffffff;
+}
+
+button:disabled {
+  background-color: #6c757d;
+}
+
+.title {
+  margin-top: 3%;
+  text-align: center;
+  color: #000066;
+  font-weight: bold;
+}
+
+/* Estilos para el cuadro de 4 secciones */
+.container {
+  display: grid;
+  text-align:justify;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.section {
+  border: 1px solid #000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.section h4.mini-title {
+  margin: 0;
+  margin-bottom: 10px; /* Añade espacio debajo del mini título */
+  font-size: 18px;
+  color: #000066;
+  font-weight: bold;
+}
+
+.section p {
+  margin: 0; /* Elimina cualquier margen adicional en el párrafo */
+}
+
+/* Estilos para el título del cuadro de 4 secciones */
+.section-title {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #000066;
+  text-align: center;
+  font-weight: bold;
+}
+
+.warning-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}

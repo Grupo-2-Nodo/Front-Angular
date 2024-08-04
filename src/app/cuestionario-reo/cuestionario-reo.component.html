@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<h2 class="title">Radar Estratégico Organizacional</h2>
+
+<div class="quiz-container">
+    <h2>Radar Estratégico</h2>
+    <div class="progress-bar">
+      <div class="progress" [style.width.%]="progress"></div>
+    </div>
+    <h3>{{ questions[currentQuestionIndex].question }}</h3>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+        <div class="radio-container">
+          <input  value="{{(i + 1)}}" type="radio" name="option" [id]="'option' + i" (change)="onRadioChange($event)"> &nbsp;
+          <label [for]="'option' + i">{{ option }}</label>
+        </div>  
+      </li>
+    </ul>
+    <div *ngIf="showWarning" class="warning-message">
+          Por favor, seleccione una opción antes de continuar.
+    </div>
+
+    <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Previous</button>
+    <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Next</button>
+    
+   
+  </div>
+   
+<div class="row">
+      <div class="col-12 text-center mt-3">
+        @if (currentQuestionIndex === 4) {
+          <a class="btn btn-info" (click)="finishQuestion()">Enviar formulario</a>
+        } 
+    </div>    
+</div>
+  
+<app-footer></app-footer>

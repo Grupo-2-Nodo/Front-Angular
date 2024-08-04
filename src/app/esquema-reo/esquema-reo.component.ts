@@ -7,6 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
 
 Chart.register(...registerables);
 
+
 @Component({
   selector: 'app-esquema-reo',
   standalone: true,
@@ -14,11 +15,17 @@ Chart.register(...registerables);
   templateUrl: './esquema-reo.component.html',
   styleUrl: './esquema-reo.component.css'
 })
-export class EsquemaReoComponent {
 
+
+export class EsquemaReoComponent {
+  arrayData: any = sessionStorage.getItem('dataForm')
+  
+
+  dataArray: Array<any> = [];
   public isBrowser = false;
 
   @ViewChild('chartCanvas') chartCanvas!: ElementRef;
+  
 
   public chartType: ChartType = 'radar';
 
@@ -32,7 +39,7 @@ export class EsquemaReoComponent {
     ],
     datasets: [{
       label: 'Resultado negocio',
-      data: [1, 3, 1, 4, 2],
+      data: this.getDataFromSessionStorage(),
       fill: true,
       backgroundColor: 'rgba(0, 0, 102, 0.2)',
       borderColor: 'rgb(0, 0, 102)',
@@ -86,6 +93,21 @@ export class EsquemaReoComponent {
       }
     }
   };
+
+  private getDataFromSessionStorage(): (number | null)[] {
+    const dataString = sessionStorage.getItem('dataFormCuestionarioReo');
+    if (dataString) {
+      try {
+        const data = JSON.parse(dataString);
+        if (Array.isArray(data)) {
+          return data.map((item: string | null) => item === null ? null : parseFloat(item));
+        }
+      } catch (e) {
+        console.error('Error parsing sessionStorage data:', e);
+      }
+    }
+    return []; // Devuelve un arreglo vacío si no hay datos o si ocurre un error
+  }
 
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
     //this.isBrowser = isPlatformBrowser(this.platformId);

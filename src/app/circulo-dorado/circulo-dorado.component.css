@@ -1,3 +1,7 @@
+/*Estilos formulario*/
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
 .circulo-contenedor {
   position: relative;
   width: 50vw;
@@ -21,22 +25,22 @@
 .circulo-1 {
   width: 25vw;
   height: 25vw;
-  background-color: #ffff40;
-  border: 2px solid #000;
+  background-color: #ffff70;
+  border: 2px solid #ffff70;
 }
 
 .circulo-2 {
   width: 18vw;
   height: 18vw;
-  background-color: #ebf833;
-  border: 2px solid #000;
+  background-color: #ffffa7;
+  border: 2px solid #ffffa7;
 }
 
 .circulo-3 {
   width: 10vw;
   height: 10vw;
-  background-color: #DBDE28;
-  border: 2px solid #000;
+  background-color: #ffffdf;
+  border: 2px solid #ffffdf;
 }
 
 .texto-circulo {
@@ -48,67 +52,142 @@
   padding-top: 5px; /* Añadir espacio superior para el texto */
 }
 
-  .card-center {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.card-center {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .card-blue {
-    background-color: #000066;
-    color:white;
-   
-  }
+.card-blue {
+  background-color: #000066;
+  color: white;
+}
 
-  .card-yellow {
-    background-color: #ffff40;
-    color:black
-  }
+.card-yellow {
+  background-color: #ffff40;
+  color: black;
+}
 
-  .card-yellow:hover {
-    cursor:pointer;
-  }
+.card-yellow:hover {
+  cursor: pointer;
+}
 
-  .infoCirculoBox {
-    display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente (opcional) */
-  }
-  .iconoDesplegable {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center;
-    position: relative; /* Necesario para el posicionamiento absoluto del icono */
-  }
-  
-  .iconoDesplegable .titulo {
-    flex-grow: 1; /* Permite que el título ocupe todo el espacio disponible */
-    text-align: center; /* Centra el texto del título */
-  }
-  
-  .iconoDesplegable i {
-    position: absolute; 
-    right: 0; 
-  }
+.infoCirculoBox {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente (opcional) */
+}
+.iconoDesplegable {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center;
+  position: relative; /* Necesario para el posicionamiento absoluto del icono */
+}
 
-  .list-group-item {
-    text-align: justify; 
-  }
+.iconoDesplegable .titulo {
+  flex-grow: 1; /* Permite que el título ocupe todo el espacio disponible */
+  text-align: center; /* Centra el texto del título */
+}
 
-  .wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .one, .two, .three {
-    padding: 10px;
-    background-color: rgb(96, 225, 203);
-    border: 1px solid #a89bff;
-    border-radius: 5%;
-    text-align: center;
-    width: 60%;
-  }
-  
- 
-  
-  
+.iconoDesplegable i {
+  position: absolute;
+  right: 0;
+}
+
+.list-group-item {
+  text-align: justify;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.one {
+  padding: 10px;
+  background-color: #ffffdf;
+  border: 1px solid #a89bff;
+  border-radius: 5%;
+  text-align: justify;
+  width: 60%;
+}
+
+.two {
+  padding: 10px;
+  background-color: #ffffa7;
+  border: 1px solid #a89bff;
+  border-radius: 5%;
+  text-align: justify;
+  width: 60%;
+}
+.three {
+  padding: 10px;
+  background-color: #ffff70;
+  border: 1px solid #a89bff;
+  border-radius: 5%;
+  text-align: justify;
+  width: 60%;
+}
+
+body {
+  font-family: "Abel", sans-serif;
+  background-color: #e9fbf8;
+  margin: 0;
+  padding: 0;
+}
+.quiz-container {
+  width: 60%;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.progress-bar {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress {
+  height: 20px;
+  background-color: #000066;
+  width: 0%;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+  text-align: left;
+}
+label {
+  color: #000000;
+}
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #000066;
+  color: #ffffff;
+}
+button:disabled {
+  background-color: #6c757d;
+}
+
+.warning-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}

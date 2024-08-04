@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+<h2 class="title">Matriz DOFA</h2>
+
+<div class="container">
+  <div class="section" id="section1">
+    <h4 class="mini-title">Debilidades</h4>
+    <p>Son los atributos y recursos internos que funcionan en contra de un resultado exitoso.
+      Estas impiden que una empresa pueda alcanzar el nivel óptimo. 
+      y que necesitan ser mejoradas para seguir siendo competitivos.</p>
+  </div>
+  <div class="section" id="section2">
+    <h4 class="mini-title">Oportunidades</h4>
+    <p>Son esos factores externos que la organización puede capitalizar o utilizar a su favor para 
+      obtener un resultado exitoso y sacarle ventaja a las empresas competidoras.</p>
+  </div>
+  <div class="section" id="section3">
+    <h4 class="mini-title">Fortalezas</h4>
+    <p>Son las áreas en que destaca una organización y la hace distinguirse de las demás.
+       Puede ser una marca sólida, clientes leales, un balance estable, uso de recursos únicos, etc.</p>
+  </div>
+  <div class="section" id="section4">
+    <h4 class="mini-title">Amenazas</h4>
+    <p>Son los factores externos que tienen el potencial de dañar a una organización. 
+      En este punto, es necesario analizarlos y prepararse para no correr riesgos.</p>
+  </div>
+</div>
+
+<div class="quiz-container">
+  <h2>Matriz DOFA</h2>
+  <div class="progress-bar">
+    <div class="progress" [style.width.%]="progress"></div>
+  </div>
+  <h4>{{ questions[currentQuestionIndex].title }}</h4>
+  <h5>{{ questions[currentQuestionIndex].question }}</h5>
+  <ul>
+    <li *ngFor="let option of questions[currentQuestionIndex].options; let i = index">
+      <input type="radio" name="option" [id]="'option' + i" (change)="selectOption(i)"[checked]="selectedOptionIndex === i"> &nbsp;
+      <label [for]="'option' + i">{{ option }}</label>
+    </li>
+  </ul>
+  <div *ngIf="showWarning" class="warning-message">
+    Por favor, seleccione una opción antes de continuar.
+  </div>
+  <button (click)="prevQuestion()" [disabled]="currentQuestionIndex === 0">Anterior</button>
+  <button (click)="nextQuestion()" [disabled]="currentQuestionIndex === questions.length - 1">Siguiente</button>
+</div>
+<div class="row">
+  <div class="col-12 text-center mt-3">
+    @if (currentQuestionIndex === 19) {
+      <a class="btn btn-info" (click)="finishQuestion()">Enviar formulario</a>
+    }
+  </div>
+
+<app-footer></app-footer>
