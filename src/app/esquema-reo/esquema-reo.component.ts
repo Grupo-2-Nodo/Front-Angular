@@ -11,7 +11,7 @@ Chart.register(...registerables);
 @Component({
   selector: 'app-esquema-reo',
   standalone: true,
-  imports:[CommonModule, NavbarComponent, FooterComponent],
+  imports:[CommonModule, NavbarComponent, FooterComponent, RouterLink],
   templateUrl: './esquema-reo.component.html',
   styleUrl: './esquema-reo.component.css'
 })

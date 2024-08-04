@@ -7,7 +7,7 @@ body {
   
   /* Estilos específicos para el encabezado */
   header {
-    background-color: rgb(96, 225, 203); /* Color de fondo del encabezado (como bg-dark en Bootstrap) */
+    background-color: #000066; /* Color de fondo del encabezado (como bg-dark en Bootstrap) */
     color: white; /* Color del texto en el encabezado */
     padding: 20px;
     width: 100;
@@ -15,12 +15,11 @@ body {
   
   .header-text {
     font-size: 2rem; /* Ajusta el tamaño según tus necesidades */
-    color: black; /* Asegúrate de que el color esté especificado si no se define en el texto-wrapper */
+    color: white; /* Asegúrate de que el color esté especificado si no se define en el texto-wrapper */
   }
   
-  .text-wrapper span {
+  .text-wrapper {
     font-size: 2rem; /* Ajusta el tamaño según tus necesidades */
-    color: black; /* Asegúrate de que el color esté especificado si no se define en el texto-wrapper */
   }
   /* Estilo opcional para el contenedor del formulario */
   .container {

@@ -18,7 +18,10 @@
   <div class="row">
     <div class="col-1">
 
+    <div style="display: block;">
+        <canvas id="barChart"></canvas>
     </div>
+  </div>
     <div class="col-10 text-center contenidoGrafico">
       <div class="canvas-wrapper" *ngIf="isBrowser">
 
@@ -30,8 +33,10 @@
     </div>
 
   </div>
-  <div class="ms-3  mb-3 mt-5 text-center ">
-    <button type="submit" class="btn colorBoton">&nbsp;Regresar al menú</button>
+  <div class="ms-3 mb-3 mt-5 text-center">
+    <button type="button" class="btn colorBoton" [routerLink]="['/home-diagnostico']">
+      &nbsp;Regresar al menú
+    </button>
   </div>
 </div>
 

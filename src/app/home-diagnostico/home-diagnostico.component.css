@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250px;
-    background-color: black;
+    height: 180px;
+    background-color: #000066;
 }
 
 .titulo{

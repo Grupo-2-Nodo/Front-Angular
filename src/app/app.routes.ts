@@ -9,6 +9,8 @@ import { CanvasComponent } from './canvas/canvas.component';
 import { HomeComponent } from './home/home.component';
 import { DofaComponent } from './dofa/dofa.component';
 import { CuestionarioReoComponent } from './cuestionario-reo/cuestionario-reo.component';
+import { ResCirculoDoradoComponent} from './res-circulo-dorado/res-circulo-dorado.component';
+import { ResDofaComponent } from './res-dofa/res-dofa.component';
 
 
 export const routes: Routes = [
@@ -50,5 +52,13 @@ export const routes: Routes = [
     {
         path:"cuestionario-reo",
         component: CuestionarioReoComponent
+    },
+    {
+        path:"res-circulo-dorado",
+        component: ResCirculoDoradoComponent
+    }
+    ,{
+        path:"res-dofa",
+        component: ResDofaComponent
     },
 ];
