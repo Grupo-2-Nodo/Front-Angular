@@ -4,6 +4,7 @@ import {CirculoDoradoService} from './circulo-dorado-service';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { FooterComponent } from '../footer/footer.component';
+import { Router } from '@angular/router';
 
 declare const Swal: any;  // Declarar Swal para TypeScript
 
@@ -36,7 +37,7 @@ export class CirculoDoradoComponent  implements OnInit{
     previousResponse = ''; // respuesta anterior
 
 
-    constructor(private quizService: CirculoDoradoService) { 
+    constructor(private quizService: CirculoDoradoService, private router: Router) { 
 
     }
 
@@ -102,7 +103,8 @@ export class CirculoDoradoComponent  implements OnInit{
         title: "¡Formulario enviado con éxito!",
         showConfirmButton: false,
         timer: 1800
-      });        
+      });    
+      this.router.navigate(['/res-circulo-dorado']);     
     } else {
       // Si no se han respondido todas las preguntas, muestra un mensaje de error
       Swal.fire({
