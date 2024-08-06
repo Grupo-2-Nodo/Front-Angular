@@ -26,6 +26,7 @@
     display: flex;
     justify-content: center;
     padding-top: 25px;
+    color: #000066; 
 }
 @media (max-width: 600px) {
     .footer-logo {
@@ -113,10 +114,12 @@ ul{
     all: unset;
     height: 35px;
     border-radius: 7px;
-    background-color: #7B66FA;
+    background-color: #000066;
     width: 35%;
     text-align: center;
     font-weight: 500;
+    color: white;
+    
 }
 
 .footer-redes{
@@ -126,4 +129,9 @@ ul{
     padding: 5px;
     display: flex;
     justify-content: space-around;
+}
+
+.footer-links .highlight {
+    color: #000066; 
+    font-weight: bold; 
 }

@@ -25,9 +25,9 @@ export class DofaComponent implements OnInit {
   showWarning: boolean = false;
   showPreviousResponse = false; // mostrar la respuesta anterior
   previousResponse = ''; // respuesta anterior
-  router: any;
+  
 
-  constructor(private dofaService: DofaService) { }
+  constructor(private dofaService: DofaService, private router: Router) { }
 
   ngOnInit(): void {
     this.questions = this.dofaService.getQuestions();
@@ -91,7 +91,7 @@ export class DofaComponent implements OnInit {
         showConfirmButton: false,
         timer: 1800
       });
-      this.router.navigate(['/esquema-reo']);        
+      this.router.navigate(['/res-dofa']);        
     } else {
       // Si no se han respondido todas las preguntas, muestra un mensaje de error
       Swal.fire({

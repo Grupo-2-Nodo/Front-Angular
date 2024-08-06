@@ -1,18 +1,50 @@
-.navbar-nav li a{
-    color: rgb(233, 251, 248);
-    text-shadow: 0px 0px 3px black;
+/* Navbar */
+.navbar-custom {
+    background-color: #ffffff; /* Fondo blanco */
+    border-bottom: 2px solid #000066; /* Línea inferior en azul oscuro */
+    padding: 10px 20px; /* Espaciado alrededor del contenido */
+}
+
+/* Marca del Navbar */
+.navbar-brand img {
+    max-width: 150px;
+}
+
+/* Botón de Toggle */
+.navbar-toggler {
+    border: 1px solid #000066; /* Borde azul oscuro */
+    background-color: #000066; /* Fondo del botón */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Personaliza el icono si lo deseas */
+}
+
+/* Enlaces del Navbar */
+.navbar-nav li a {
+    color: #000066; /* Color del texto en azul oscuro */
+    font-weight: bold;
+    font-size: 18px;
     margin-right: 20px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    -webkit-text-stroke: 0.5px black;
-    font-size: 20px;
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s, border-bottom 0.3s; /* Transiciones suaves */
+    padding: 5px 0; /* Espaciado vertical */
 }
 
-.navbar-nav li a:hover{
-    border-bottom: 3px solid #60E1CB;
-    color: #60E1CB;
+/* Hover sobre los enlaces */
+.navbar-nav li a:hover {
+    color: #60E1CB; /* Color del texto en azul claro */
+    border-bottom: 3px solid #60E1CB; /* Línea de borde inferior azul claro */
+    transform: scale(1.05); /* Escala ligera al hacer hover */
 }
 
-a{
-    text-decoration: none;
+/* Para dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar-nav {
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+
+    .navbar-nav li {
+        margin: 10px 0; /* Espaciado vertical entre los ítems */
+    }
 }
