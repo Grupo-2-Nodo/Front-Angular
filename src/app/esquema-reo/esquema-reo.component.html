@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-12 text-center text-primary">
         <br>
-        <h2 class="text-center colorTituloAzul">Resultado radar estrategico organizacional</h2>
+        <h2 class="text-center Titulo">Resultado radar estrategico organizacional</h2>
         <br>
         <iframe width="500" height="280" src="https://www.youtube.com/embed/R_eNtRGzvcw" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -33,7 +33,22 @@
     </div>
 
   </div>
-  <div class="ms-3 mb-3 mt-5 text-center">
+  <div class="row justify-content-center mt-2">
+    <div class="col-12">
+      
+      <div class="row p-5">
+        <div *ngFor="let grupoData of datosResultado" class="col-6 p-4" >
+            <h3 class="text-center Titulo">Resultado de {{ grupoData.grupo }}</h3>
+            <h5>Su resultado es {{grupoData.rango}}</h5>
+            <div *ngFor="let item of grupoData.lista" class="justify-text">
+              <p><span class="Titulo">{{ item.titulo }}:</span> {{ item.texto }}</p>
+            </div>
+        </div>
+      </div>  
+      
+    </div>
+  </div>
+  <div class="ms-3 mb-3 text-center">
     <button type="button" class="btn colorBoton" [routerLink]="['/home-diagnostico']">
       &nbsp;Regresar al menú
     </button>

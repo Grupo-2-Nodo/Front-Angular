@@ -7,7 +7,7 @@ export class CirculoDoradoService {
     private formQuestions = [
       {
         title: '¿Por qué? ¿Para qué?',
-        question: '¿En qué medida cree que el próposito del su negocio está claramente definido?',
+        question: '¿En qué medida cree que el propósito del su negocio está claramente definido?',
         options: [
           'Nada definido',
           'Poco definido',
@@ -17,7 +17,7 @@ export class CirculoDoradoService {
       },
       {
         title: '¿Por qué? ¿Para qué?',
-        question: '¿Qué tan alineados estan su equipo y colaboradores externos con el próposito del negocio?',
+        question: '¿Qué tan alineados estan su equipo y colaboradores externos con el propósito del negocio?',
         options: [
           'Nada alineado',
           'Poco alineado',
@@ -47,7 +47,7 @@ export class CirculoDoradoService {
       },
       {
         title: '¿Por qué? ¿Para qué?',
-        question: '¿Qué tan bien se refleja el próposito de su empresa en las estrategias de marketing y comunicación?',
+        question: '¿Qué tan bien se refleja el propósito de su empresa en las estrategias de marketing y comunicación?',
         options: [
           'Nada bien',
           'Poco bien',
@@ -57,7 +57,7 @@ export class CirculoDoradoService {
       },
       {
         title: '¿Por qué? ¿Para qué?',
-        question: '¿En qué medida siente que sus clientes comprenden y valran el próposito de su negocio',
+        question: '¿En qué medida siente que sus clientes comprenden y valran el propósito de su negocio',
         options: [
           'Nada comprendido',
           'Poco comprendido',
@@ -66,7 +66,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿Qué tan bien cree que su organización sigue consistentemente los procesos documentados',
         options: [
           'Nada bien',
@@ -76,7 +76,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿En qué medida cree que las prácticas aseguran la calidad y la integridad en lo que hace?',
         options: [
           'Nada asegurado',
@@ -86,7 +86,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿En qué medida los procesos y métodos utilizados en su empresa son eficientes?',
         options: [
           'Nada eficiente',
@@ -96,7 +96,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿En qué medida sus procesos internos fomentan la innovación y la creatividad?',
         options: [
           'Nada fomentan',
@@ -106,7 +106,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿Qué tan bien funcionan sus sistemas de feed back para mejorar continuamente sus métodos y procesos?',
         options: [
           'Nada bien',
@@ -116,7 +116,7 @@ export class CirculoDoradoService {
         ]
       },
       {
-        title: '¿Comó?',
+        title: '¿Cómo?',
         question: '¿Qué tan eficaz es su red de contactos y colaboradores para el crecimiento de su negocio?',
         options: [
           'Nada eficaz',

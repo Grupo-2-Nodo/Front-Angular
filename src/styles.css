@@ -4,7 +4,9 @@ body{
     background-color: rgb(233,251,248)
 }
 
-
+.justify-text {
+    text-align: justify;
+}
 
 .colorBoton{
     background-color: #000066 !important;

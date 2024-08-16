@@ -1,14 +1,77 @@
-<div class="centroimg">
-  <img src="../../assets/avatar.png" class="icono" alt="LOGIN" />
-</div>
+
+<app-navbar></app-navbar>
+
 <div class="centrologin">
   <section class="form-login">
-    <h5>Iniciar sesion</h5>
-    <input class="controls" type="text" name="usuario" value="" placeholder="Usuario" />
-    <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" />
-    <input class="buttons" type="submit" name="" value="Ingresar" />
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <strong><h5><b>Iniciar sesión</b></h5></strong>
+
+      <input
+        class="controls"
+        type="text"
+        formControlName="usuario"
+        placeholder="Usuario"
+      />
+      <div
+        *ngIf="
+          loginForm.get('usuario')?.invalid && loginForm.get('usuario')?.touched
+        "
+      >
+        <small
+          *ngIf="loginForm.get('usuario')?.errors?.['required']"
+          [ngClass]="{'error-message': true}"
+        >
+          El usuario es requerido.
+        </small>
+        <small
+          *ngIf="loginForm.get('usuario')?.errors?.['minlength']"
+          [ngClass]="{'error-message': true}"
+        >
+          El usuario debe tener al menos 3 caracteres.
+        </small>
+      </div>
+
+      <input
+        class="controls"
+        type="password"
+        formControlName="contrasena"
+        placeholder="Contraseña"
+      />
+      <div
+        *ngIf="
+          loginForm.get('contrasena')?.invalid &&
+          loginForm.get('contrasena')?.touched
+        "
+      >
+        <small
+          *ngIf="loginForm.get('contrasena')?.errors?.['required']"
+          [ngClass]="{'error-message': true}"
+        >
+          La contraseña es requerida.
+        </small>
+        <small
+          *ngIf="loginForm.get('contrasena')?.errors?.['minlength']"
+          [ngClass]="{'error-message': true}"
+        >
+          La contraseña debe tener al menos 6 caracteres.
+        </small>
+      </div>
+
+      <input
+        id="btn-iniciar-sesion"
+        class="buttons"
+        type="submit"
+        value="Ingresar"
+        [disabled]="loginForm.invalid"
+      />
+    </form>
     <p>
-      <strong><span>¿Olvidaste tu Contraseña?</span></strong>
+      <strong><span class="lblOlvidoContrasenia">¿Olvidaste tu Contraseña?</span></strong>
+    </p>
+    <p>
+      <strong><span><a [routerLink]="'../registro'" class="lblRegistrarse">Registrarse</a></span></strong>
     </p>
   </section>
 </div>
+
+<app-footer></app-footer>
