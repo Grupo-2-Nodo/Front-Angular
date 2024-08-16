@@ -8,6 +8,8 @@
 /* Marca del Navbar */
 .navbar-brand img {
     max-width: 150px;
+    height: 70px;
+
 }
 
 /* Botón de Toggle */
@@ -24,7 +26,7 @@
 .navbar-nav li a {
     color: #000066; /* Color del texto en azul oscuro */
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
     margin-right: 20px;
     text-decoration: none; /* Quita el subrayado */
     transition: color 0.3s, border-bottom 0.3s; /* Transiciones suaves */

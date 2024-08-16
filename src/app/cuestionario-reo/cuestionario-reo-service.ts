@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class CuestionarioReoService {
     private questions = [
       {
-        question: 'Conocimiento del Cliente',
+        question: 'Coherencia del modelo de negocio',
         options: [
           'Se le dificulta describir quién es su cliente.',
           'Solo describe al cliente desde una segmentación tradicional de mercado (estrato, edad, etc.).',
@@ -15,7 +15,7 @@ export class CuestionarioReoService {
         ]
       },
       {
-        question: 'Segmentación del Mercado',
+        question: 'Conocimiento del cliente',
         options: [
           'No se realiza segmentación.',
           'Segmentación basada en demografía básica.',
@@ -24,7 +24,7 @@ export class CuestionarioReoService {
         ]
       },
       {
-        question: 'Posicionamiento del Producto',
+        question: 'Salud financiera',
         options: [
           'No hay posicionamiento claro.',
           'Posicionamiento basado solo en precio.',
@@ -33,7 +33,7 @@ export class CuestionarioReoService {
         ]
       },
       {
-        question: 'Estrategia de Venta',
+        question: 'Alienacion interna',
         options: [
           'No hay una estrategia de venta definida.',
           'Estrategia de venta basada en descuentos y promociones.',
@@ -42,7 +42,7 @@ export class CuestionarioReoService {
         ]
       },
       {
-        question: 'Evaluación de la Competencia',
+        question: 'Conocimiento del negocio',
         options: [
           'No se evalúa la competencia.',
           'Evaluación ocasional de la competencia.',
