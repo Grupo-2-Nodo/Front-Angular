@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import {CuestionarioReoService} from "./cuestionario-reo-service";
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../navbar/navbar.component';
-import { FooterComponent} from '../footer/footer.component'
-import { RouterLink } from "@angular/router";
-import { Router } from '@angular/router';
+import { FooterComponent} from '../footer/footer.component' 
+import { Router ,NavigationEnd, RouterLink} from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 declare const Swal: any;  // Declarar Swal para TypeScript
 
@@ -35,7 +35,6 @@ export class CuestionarioReoComponent implements OnInit {
   
     }
 
-  
 
     ngOnInit(): void {
         this.questions = this.quizService.getQuestions();
